@@ -136,40 +136,47 @@ public class LoginActivity extends AppCompatActivity {
                 readUserE.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        ListData.enable_user_current = snapshot.getValue(Integer.class);
-                        if (ListData.enable_user_current == 1) {
-                            progressDialog.dismiss();
-                            Toast.makeText(LoginActivity.this, "Tài khoản của bạn đã bị vô hiệu hóa", Toast.LENGTH_SHORT).show();
-                            ListData.type_user_current = -1;
-                        } else {
-                            mAuth = FirebaseAuth.getInstance();
-                            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(LoginActivity.this, task -> {
-                                if (task.isSuccessful()) {
-                                    putMK(email, password);
-                                    DatabaseReference readUser = database.getReference("coffee-poly").child("type_user").child(chilgPath);
-                                    readUser.addValueEventListener(new ValueEventListener() {
-                                        @Override
-                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                            ListData.type_user_current = snapshot.getValue(Integer.class);
-                                            Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                            startActivity(intent);
-                                            finishAffinity();
-                                        }
+                        try {
+                            ListData.enable_user_current = snapshot.getValue(Integer.class);
+                            if (ListData.enable_user_current == 1) {
+                                progressDialog.dismiss();
+                                Toast.makeText(LoginActivity.this, "Tài khoản của bạn đã bị vô hiệu hóa", Toast.LENGTH_SHORT).show();
+                                ListData.type_user_current = -1;
+                            } else {
+                                mAuth = FirebaseAuth.getInstance();
+                                mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(LoginActivity.this, task -> {
+                                    if (task.isSuccessful()) {
+                                        putMK(email, password);
+                                        DatabaseReference readUser = database.getReference("coffee-poly").child("type_user").child(chilgPath);
+                                        readUser.addValueEventListener(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                ListData.type_user_current = snapshot.getValue(Integer.class);
+                                                Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                                startActivity(intent);
+                                                finishAffinity();
+                                            }
 
-                                        @Override
-                                        public void onCancelled(@NonNull DatabaseError error) {
-                                            Toast.makeText(LoginActivity.this, "Tài khoản hoặc mật khẩu sai", Toast.LENGTH_SHORT).show();
-                                        }
-                                    });
-                                } else {
-                                    progressDialog.dismiss();
-                                    Log.w(TAG, "signInWithEmail:failure", task.getException());
-                                    Toast.makeText(LoginActivity.this, "Tài khoản hoặc mật khẩu sai", Toast.LENGTH_SHORT).show();
-                                }
-                                            });
-                                        }
+                                            @Override
+                                            public void onCancelled(@NonNull DatabaseError error) {
+                                                Toast.makeText(LoginActivity.this, "Tài khoản hoặc mật khẩu sai", Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+                                    } else {
+                                        progressDialog.dismiss();
+                                        Log.w(TAG, "signInWithEmail:failure", task.getException());
+                                        Toast.makeText(LoginActivity.this, "Tài khoản hoặc mật khẩu sai", Toast.LENGTH_SHORT).show();
                                     }
+                                });
+                            }
+                        } catch (Exception e) {
+                            Log.e("Exception", e.toString());
+                            progressDialog.dismiss();
+                            Toast.makeText(LoginActivity.this, "Tài khoản hoặc mật khẩu sai", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
 
                                     @Override
                                     public void onCancelled(@NonNull DatabaseError error) {
