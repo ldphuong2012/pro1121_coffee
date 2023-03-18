@@ -99,28 +99,33 @@ public class CartFragment extends Fragment {
         reference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                Item_Bill item_bill = snapshot.getValue(Item_Bill.class);
-                if (item_bill != null) {
-                    list.add(item_bill);
-                    cartRCVAdapter.setData(list);
-                    if (isFirst == true) {
-                        setAL();
-                        isFirst = false;
+                try {
+                    Item_Bill item_bill = snapshot.getValue(Item_Bill.class);
+                    if (item_bill != null) {
+                        list.add(item_bill);
+                        cartRCVAdapter.setData(list);
+                        if (isFirst == true) {
+                            setAL();
+                            isFirst = false;
+                        }
+                        cartRecyclerView.setAdapter(cartRCVAdapter);
+                        layDanhSachTinhTien();
                     }
-                    cartRecyclerView.setAdapter(cartRCVAdapter);
-                    layDanhSachTinhTien();
+                    if (list.size() == 0) {
+                        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                        tv_cart_mess.setText("Giỏ hàng của bạn hiện không có sản phẩm nào");
+                        tv_cart_mess.setLayoutParams(lp);
+                        ln_bill.setVisibility(View.INVISIBLE);
+                    } else {
+                        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                                0, 0);
+                        tv_cart_mess.setLayoutParams(lp);
+                    }
+                }catch (Exception e){
+                    Log.e("Exception", e.toString());
                 }
-                if (list.size() == 0) {
-                    LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                            ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                    tv_cart_mess.setText("Giỏ hàng của bạn hiện không có sản phẩm nào");
-                    tv_cart_mess.setLayoutParams(lp);
-                    ln_bill.setVisibility(View.INVISIBLE);
-                } else {
-                    LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                           0, 0);
-                    tv_cart_mess.setLayoutParams(lp);
-                }
+
             }
 
             @Override
