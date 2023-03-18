@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "970201460393",
+    "project_id": "coffepoly-f7e3b",
+    "storage_bucket": "coffepoly-f7e3b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970201460393:android:0bbe6be26958b240ec43b8",
+        "android_client_info": {
+          "package_name": "minhtvph26873.poly.pnlib"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970201460393-qq86geprs5ina6t0mggkq6daai5gq9tq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0lPYoBmcZkIpEJ2_IAy3oPdgVFLgvdgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970201460393-qq86geprs5ina6t0mggkq6daai5gq9tq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970201460393:android:bc4af261aa4b2f28ec43b8",
+        "android_client_info": {
+          "package_name": "poly.ph26873.coffeepoly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970201460393-qq86geprs5ina6t0mggkq6daai5gq9tq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0lPYoBmcZkIpEJ2_IAy3oPdgVFLgvdgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970201460393-qq86geprs5ina6t0mggkq6daai5gq9tq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

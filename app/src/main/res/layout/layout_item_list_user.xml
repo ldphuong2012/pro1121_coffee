@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:elevation="150dp"
+    app:cardCornerRadius="13dp">
+
+    <LinearLayout
+        android:id="@+id/ln_item_list_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/imv_avatar_list_user"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@color/color1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name_list_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="nguyen van a"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_email_list_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="example@gmail.com"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/imv_more_vert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more_vert_40px" />
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left"
+    android:orientation="vertical"
+    android:padding="5dp"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imv_avatar_you"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:src="@color/green1" />
+        <TextView
+            android:id="@+id/tv_name_you"
+            android:textSize="20dp"
+            android:text="Nhan vien"
+            android:maxLines="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
+
+
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_mess_nv"
+        android:text="Xin chào"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:background="@drawable/custom_mess_user_nv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"/>
+    <TextView
+        android:id="@+id/tv_time_you"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:text="time"
+        android:textSize="13dp"/>
+
+
+
+</LinearLayout>

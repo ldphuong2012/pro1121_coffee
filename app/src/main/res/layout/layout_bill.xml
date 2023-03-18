@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_bill"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:layout_marginBottom="5dp"
+    android:id="@+id/ln_bill_1">
+
+    <TextView
+        android:id="@+id/tv_bill_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thời gian: 18_11_2022 12:36:23"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="19dp" />
+    <TextView
+        android:id="@+id/tv_bill_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thông tin chi tiết:"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thông tin chi tiết:"
+        android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_bill_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white3"
+            android:text="Cà phê sữa x5 = 30k"
+            android:paddingLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_bill_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Địa chỉ: Hà nội"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_bill_number_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thông tin chi tiết:"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_bill_mess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tổng tiền: 450k"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/tv_bill_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tổng tiền: 450k"
+        android:textColor="@color/red" />
+
+
+    <TextView
+        android:id="@+id/tv_bill_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trạng thái: Đang giao hàng"
+        android:textColor="@color/green1" />
+
+    <Button
+        android:id="@+id/btn_bill_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="Hủy" />
+
+</LinearLayout>

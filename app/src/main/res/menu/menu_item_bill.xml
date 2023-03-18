@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mn_contact"
+        android:title="Liên hệ người đặt" />
+    <item
+        android:id="@+id/mn_cancel"
+        android:title="Xác nhận hủy đơn" />
+
+</menu>

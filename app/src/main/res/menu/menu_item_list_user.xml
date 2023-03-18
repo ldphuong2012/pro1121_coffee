@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mv_seenInfo"
+        android:icon="@drawable/seen_info_48px"
+        android:title="Xem thông tin tài khoản" />
+    <item
+        android:id="@+id/mv_lock"
+        android:icon="@drawable/lock_person_48px"
+        android:title="Vô hiệu hóa tài khoản" />
+    <item
+        android:id="@+id/mv_unlock"
+        android:icon="@drawable/lock_person_48px"
+        android:title="Kích hoạt tài khoản" />
+</menu>

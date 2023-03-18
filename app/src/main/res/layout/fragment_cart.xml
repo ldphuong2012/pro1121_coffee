@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CartFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_cart_mess"
+            android:textColor="@color/red"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cartRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_height="170dp"
+            android:id="@+id/ln_bill"
+            android:layout_width="match_parent"
+            android:background="@drawable/custom_bb"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:visibility="invisible"
+
+            >
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:text="Thông tin đơn hàng của bạn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_orange_dark" />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical"
+                    android:paddingLeft="3dp">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/custom_scr">
+
+                        <TextView
+                            android:id="@+id/tv_cart_thong_ke"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Cà phê sữa x6 = 135k"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </ScrollView>
+
+
+                </LinearLayout>
+
+
+                <ImageButton
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_cart_order"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ordergif" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_cart_tong_tien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Thanh toán: 420K"
+                android:textColor="@color/red"
+                android:textSize="18dp"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

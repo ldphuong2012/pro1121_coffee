@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.DetailTurnoverActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/holo_orange_dark"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+                app:titleTextAppearance="@font/font_1">
+
+                <ImageView
+                    android:id="@+id/imv_back_layout_detail_turnover"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_back"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@+id/imv_back_layout_detail_turnover"
+                    android:text="Chi tiết đơn hàng"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+        </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/ln_internet_dt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/wifi_off_20px" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="Không có kết nối mạng"
+                            android:textAlignment="center"
+                            android:textColor="@color/red"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_dt_turn_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Thoi gian"
+                        android:textColor="@color/green1"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_dt_turn_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ho ten"
+                        android:textColor="@color/black"
+                        android:textSize="23dp" />
+
+                    <TextView
+                        android:id="@+id/tv_dt_turn_nbp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="so dien thoai"
+                        android:textColor="@color/black"
+                        android:textSize="23dp" />
+
+                    <TextView
+                        android:id="@+id/tv_dt_turn_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="email"
+                        android:textColor="@color/black"
+                        android:textSize="23dp" />
+
+                    <TextView
+                        android:id="@+id/tv_dt_turn_ad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="dia chi"
+                        android:textColor="@color/black"
+                        android:textSize="23dp" />
+
+                    <TextView
+                        android:id="@+id/tv_dt_turn_sta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="trang thai"
+                        android:textColor="@color/black"
+                        android:textSize="23dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Chi tiết hóa đơn:"
+                        android:textSize="20dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/dt_turn_RecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_dt_turn_total"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="thanh toan "
+                        android:textColor="@color/red"
+                        android:textSize="23dp" />
+
+                </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_all_setting_0"
+        android:title="Chức năng dành cho người dùng">
+        <menu>
+            <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/home_48px"
+                android:title="Trang chủ" />
+            <item
+                android:id="@+id/nav_cart"
+                android:icon="@drawable/shopping_cart_48px"
+                android:title="Giỏ hàng" />
+            <item
+                android:id="@+id/nav_bill"
+                android:icon="@drawable/bill_48px"
+                android:title="Đơn hàng của bạn" />
+            <item
+                android:id="@+id/nav_favourite"
+                android:icon="@drawable/favorite_48px"
+                android:title="Yêu thích" />
+            <item
+                android:id="@+id/nav_history"
+                android:icon="@drawable/history_48px"
+                android:title="Lịch sử" />
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/nav_all_setting_2"
+        android:title="Chức năng dành cho nhân viên">
+        <menu>
+            <item
+                android:id="@+id/nav_order_management"
+                android:icon="@drawable/receipt_long_48px"
+                android:title="Xác nhận đơn hàng" />
+            <item
+                android:id="@+id/nav_order_management_scfl"
+                android:icon="@drawable/shipping_48px"
+                android:title="Đơn hàng đang giao" />
+
+            <item
+                android:id="@+id/nav_history_bill"
+                android:icon="@drawable/bill_ok_48px"
+                android:title="Đơn hàng thành công" />
+            <item
+                android:id="@+id/nav_bill_faild"
+                android:icon="@drawable/bill_faild_48px"
+                android:title="Đơn hàng thất bại" />
+            <item
+                android:id="@+id/nav_sms"
+                android:icon="@drawable/sms_48px"
+                android:title="Tin nhắn" />
+            <item
+                android:id="@+id/nav_prd"
+                android:icon="@drawable/category_48px"
+                android:title="Sản Phẩm" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/nav_all_setting_1"
+        android:title="Chức năng dành cho quản lí">
+        <menu>
+            <item
+                android:id="@+id/nav_turnover"
+                android:icon="@drawable/turnover_48px"
+                android:title="Thống kê hóa đơn" />
+            <item
+                android:id="@+id/nav_turnover_product"
+                android:icon="@drawable/local_cafe_48px"
+                android:title="Thống kê sản phẩm" />
+            <item
+                android:id="@+id/nav_top_product"
+                android:icon="@drawable/chart_48px"
+                android:title="Bảng xếp hạng sản phẩm" />
+            <item
+                android:id="@+id/nav_list_user"
+                android:icon="@drawable/list_user_48px"
+                android:title="Danh sách người dùng" />
+        </menu>
+    </item>
+
+    <item android:title="Thiết lập chung">
+        <menu>
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/settings_48px"
+                android:title="Thiết lập tài khoản" />
+            <item
+                android:id="@+id/nav_password"
+                android:icon="@drawable/lock_48px"
+                android:title="Thay đổi mật khẩu" />
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/logout_48px"
+        android:title="Đăng xuất" />
+    <!--    <item-->
+    <!--        android:id="@+id/nav_home"-->
+    <!--        android:icon="@drawable/home_48px"-->
+    <!--        android:title="Trang chủ" />-->
+    <!--    <item-->
+    <!--        android:id="@+id/nav_home"-->
+    <!--        android:icon="@drawable/home_48px"-->
+    <!--        android:title="Trang chủ" />-->
+
+
+</menu>
