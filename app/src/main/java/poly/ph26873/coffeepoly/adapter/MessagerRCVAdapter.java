@@ -98,18 +98,24 @@ public class MessagerRCVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 reference.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        User user = snapshot.getValue(User.class);
-                        if (message.getType() == 2) {
-                            userHolder.tv_name_me.setTextColor(Color.BLACK);
-                        } else if (message.getType() == 1) {
-                            userHolder.tv_name_me.setTextColor(Color.BLUE);
-                        } else {
-                            userHolder.tv_name_me.setTextColor(Color.GREEN);
+                        try {
+                            User user = snapshot.getValue(User.class);
+                            if (message.getType() == 2) {
+                                userHolder.tv_name_me.setTextColor(Color.BLACK);
+                            } else if (message.getType() == 1) {
+                                userHolder.tv_name_me.setTextColor(Color.BLUE);
+                            } else {
+                                userHolder.tv_name_me.setTextColor(Color.GREEN);
+                            }
+                            userHolder.tv_name_me.setText(user.getName());
+
+                            if (isValidContextForGlide(context)) {
+                                Glide.with(context).load(Uri.parse(user.getImage())).error(R.drawable.image_guest).into(userHolder.imv_avatar_me);
+                            }
+                        }catch (Exception e){
+                            Log.e("Exception", e.toString() );
                         }
-                        userHolder.tv_name_me.setText(user.getName());
-                        if (isValidContextForGlide(context)) {
-                            Glide.with(context).load(Uri.parse(user.getImage())).error(R.drawable.image_guest).into(userHolder.imv_avatar_me);
-                        }
+
 
 
                     }
