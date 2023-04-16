@@ -161,30 +161,35 @@ public class MessagerRCVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 reference.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        User user = snapshot.getValue(User.class);
-                        if (message.getType() == 2) {
-                            nvHolder.tv_name_you.setTextColor(Color.BLACK);
-                            nvHolder.tv_name_you.setText(user.getName());
-                        } else if (message.getType() == 1) {
-                            nvHolder.tv_name_you.setTextColor(Color.BLUE);
-                            nvHolder.tv_name_you.setText("Nhân viên: " + user.getName());
-                        } else {
-                            nvHolder.tv_name_you.setTextColor(Color.GREEN);
-                            nvHolder.tv_name_you.setText("Quản lí: " + user.getName());
-                        }
-                        if (isValidContextForGlide(context)) {
-                            Glide.with(context).load(Uri.parse(user.getImage())).error(R.drawable.image_guest).into(nvHolder.imv_avatar_you);
-                        }
+                        try {
 
-                        if (ListData.type_user_current != 2) {
-                            nvHolder.imv_avatar_you.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    Intent intent = new Intent(context, DetailUserActivity.class);
-                                    intent.putExtra("user", user);
-                                    context.startActivity(intent);
-                                }
-                            });
+                            User user = snapshot.getValue(User.class);
+                            if (message.getType() == 2) {
+                                nvHolder.tv_name_you.setTextColor(Color.BLACK);
+                                nvHolder.tv_name_you.setText(user.getName());
+                            } else if (message.getType() == 1) {
+                                nvHolder.tv_name_you.setTextColor(Color.BLUE);
+                                nvHolder.tv_name_you.setText("Nhân viên: " + user.getName());
+                            } else {
+                                nvHolder.tv_name_you.setTextColor(Color.GREEN);
+                                nvHolder.tv_name_you.setText("Quản lí: " + user.getName());
+                            }
+                            if (isValidContextForGlide(context)) {
+                                Glide.with(context).load(Uri.parse(user.getImage())).error(R.drawable.image_guest).into(nvHolder.imv_avatar_you);
+                            }
+
+                            if (ListData.type_user_current != 2) {
+                                nvHolder.imv_avatar_you.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        Intent intent = new Intent(context, DetailUserActivity.class);
+                                        intent.putExtra("user", user);
+                                        context.startActivity(intent);
+                                    }
+                                });
+                            }
+                        } catch (Exception e) {
+                            Log.e("ex:", e.toString());
                         }
                     }
 
